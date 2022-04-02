@@ -10,9 +10,9 @@ def test(T, R, C):
         total.append(f'Case #{i}\n')
 
         sum = 0
-        while sum <= 2*R[i]:
+        while sum <= 2*R[i-1]:
             if sum == 0:
-                for j in range((2*R[i]+1)+2):
+                for j in range((2*R[i-1]+1)+2):
                     if j == 0 or j == 1:
                         total.append(period)
                         continue
@@ -27,7 +27,7 @@ def test(T, R, C):
                 continue
 
             if sum == 1:
-                for j in range(2*C[i]+1):
+                for j in range(2*C[i-1]+1):
                     if j == 0 or j == 1:
                         total.append(period)
                         continue
@@ -42,7 +42,7 @@ def test(T, R, C):
                 continue
 
             if sum >= 2 and sum % 2 == 0:
-                for k in range(2*C[i]+1):
+                for k in range(2*C[i-1]+1):
                     if k % 2 == 0:
                         total.append(plus)
                     else:
@@ -50,7 +50,7 @@ def test(T, R, C):
                 total.append('\n')
                 sum += 1
             else:
-                for k in range(2*C[i]+1):
+                for k in range(2*C[i-1]+1):
                     if k % 2 == 0:
                         total.append(pipes)
                         continue
