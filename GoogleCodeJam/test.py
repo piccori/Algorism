@@ -12,7 +12,7 @@ def test(T, R, C):
         sum = 0
         while sum <= 2*R[i-1]:
             if sum == 0:
-                for j in range((2*R[i-1]+1)+2):
+                for j in range(2*C[i-1]+1):
                     if j == 0 or j == 1:
                         total.append(period)
                         continue
@@ -57,7 +57,6 @@ def test(T, R, C):
                     total.append(period)
                 total.append('\n')
                 sum += 1
-
     return total
 
 
